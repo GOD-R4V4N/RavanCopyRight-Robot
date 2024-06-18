@@ -1,0 +1,1 @@
+mrroy: python -m COPYRIGHT
