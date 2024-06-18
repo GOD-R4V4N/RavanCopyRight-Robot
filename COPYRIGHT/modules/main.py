@@ -18,6 +18,7 @@ from pyrogram.errors import FloodWait
 
 NYKAA = [
     "https://telegra.ph/file/167699a93e93a71f088cd.jpg",
+  
 ]
 
 
@@ -30,8 +31,8 @@ async def start(_, msg):
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="Cright_back"),
-          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="Asur_back")
+          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="Asur_back"),
+          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="Cright_back")
         ],
         [
           InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
@@ -47,16 +48,16 @@ async def start(_, msg):
 
 gd_buttons = [              
         [
-            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx"),
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
+            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/God_Ravana"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Ravan_Lankaa"),    
         ]
         ]
 # ------------------------------------------------------------------------------- #
 
 ROY_BTN = [              
         [
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/the_friendz"),
-            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx"),    
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Ravan_Lankaa"),
+            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/God_Ravana"),    
         ]
 ]
 # ------------------------------------------------------------------------------- #
@@ -70,8 +71,8 @@ async def cutebackbutton(client, callback_query: CallbackQuery, _):
               InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ],
             [
-              InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="Cright_back"),
-              InlineKeyboardButton("ʜᴇʟᴘ", callback_data="Asur_back")
+              InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="Asur_back"),
+              InlineKeyboardButton("ʜᴇʟᴘ", callback_data="Cright_back")
             ],
             [
               InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
@@ -86,8 +87,8 @@ async def cutebackbutton(client, callback_query: CallbackQuery, _):
 
     
 
-@app.on_callback_query(filters.regex("Cright_back"))
-async def Cright_back(_, query: CallbackQuery):
+@app.on_callback_query(filters.regex("Asur_back"))
+async def Asur_back(_, query: CallbackQuery):
     await query.message.edit_caption(ABOUT_STRING,
                                     reply_markup=InlineKeyboardMarkup(gd_buttons),)
         
@@ -113,8 +114,8 @@ EVAA = [
 # ------------------------------------------------------------------------------- #
 
 
-@app.on_callback_query(filters.regex("Asur_back"))
-async def Asur_back(_, query: CallbackQuery):
+@app.on_callback_query(filters.regex("Cright_back"))
+async def Cright_back(_, query: CallbackQuery):
     await query.message.edit_caption(HELP_STRING,
                                     reply_markup=InlineKeyboardMarkup(ROY_BTN),)
 
@@ -131,13 +132,13 @@ REPO_STRING = """**
 async def start(_, msg):
     REPO_BTN = [
         [
-          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/GOD-R4V4N/RavanCopyRight-Robot"),
+          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/tinaarobot/COPYRIGHT"),
           ],
     ]
     
     reply_markup = InlineKeyboardMarkup(REPO_BTN)
     
-    await msg.reply_photo(photo="https://telegra.ph/file/feb8ec9cd6194018ccc4c.jpg", caption=REPO_STRING,reply_markup=reply_markup=
+    await msg.reply_photo(photo="https://telegra.ph/file/feb8ec9cd6194018ccc4c.jpg", caption=REPO_STRING,reply_markup=reply_markup
                          )
 
 
@@ -176,7 +177,7 @@ async def activevc(_, message: Message):
         f"● ᴜsᴇᴅ ➥ {size_formatter(storage.used)}\n"
         f"● ғʀᴇᴇ ➥ {size_formatter(storage.free)}\n"
         f"● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➥ {python_version}\n\n"
-        f"❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥  @itz_Asuraa "
+        f"❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ @itz_Asuraa"
     )
 
     await message.reply(reply_text, reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
@@ -232,5 +233,3 @@ async def delete_pdf_files(client, message):
 @app.on_message(filters.group & filters.document)
 async def message_handler(client, message):
     await delete_pdf_files(client, message)
-
-
