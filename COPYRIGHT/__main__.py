@@ -4,7 +4,7 @@ from pyrogram import idle
 from COPYRIGHT import COPYRIGHT
 from COPYRIGHT.modules import ALL_MODULES
 
-LOGGER_ID = -1002010924139
+LOGGER_ID = -1002100219353
 
 loop = asyncio.get_event_loop()
 
